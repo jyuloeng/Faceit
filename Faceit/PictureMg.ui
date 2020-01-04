@@ -1,0 +1,885 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PictureMg</class>
+ <widget class="QWidget" name="PictureMg">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>526</width>
+    <height>499</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>PictureMg</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background:#fff</string>
+  </property>
+  <widget class="QPushButton" name="btn_open">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>20</y>
+     <width>80</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: #fff;
+text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+background-color: #169fe6;
+padding: 11px 19px;
+font-size: 17px;
+border-radius: 6px;
+font-family: &quot;Microsoft YaHei UI&quot;</string>
+   </property>
+   <property name="text">
+    <string>打开</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_back">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>440</y>
+     <width>40</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: #fff;
+text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+background-color: #169fe6;
+font-size: 17px;
+border-radius: 6px;
+font-family: &quot;Microsoft YaHei UI&quot;</string>
+   </property>
+   <property name="text">
+    <string>&lt;</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_save">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>20</y>
+     <width>80</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: #fff;
+text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+background-color: #169fe6;
+padding: 11px 19px;
+font-size: 17px;
+border-radius: 6px;
+font-family: &quot;Microsoft YaHei UI&quot;</string>
+   </property>
+   <property name="text">
+    <string>保存</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_reset">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>20</y>
+     <width>80</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: #fff;
+text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+background-color: #169fe6;
+padding: 11px 19px;
+font-size: 17px;
+border-radius: 6px;
+font-family: &quot;Microsoft YaHei UI&quot;</string>
+   </property>
+   <property name="text">
+    <string>重置</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>80</y>
+     <width>120</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-size:17px;
+font-family: &quot;Microsoft YaHei UI&quot;;
+</string>
+   </property>
+   <property name="text">
+    <string>当前图像信息：</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>110</y>
+     <width>90</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-size:17px;
+font-family: &quot;Microsoft YaHei UI&quot;;
+</string>
+   </property>
+   <property name="text">
+    <string>像素个数：</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_pix">
+   <property name="geometry">
+    <rect>
+     <x>115</x>
+     <y>110</y>
+     <width>120</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-size:17px;
+font-family: &quot;Microsoft YaHei UI&quot;;
+border:1px solid #999999
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_rows">
+   <property name="geometry">
+    <rect>
+     <x>115</x>
+     <y>150</y>
+     <width>120</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-size:17px;
+font-family: &quot;Microsoft YaHei UI&quot;;
+border:1px solid #999999
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>150</y>
+     <width>50</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-size:17px;
+font-family: &quot;Microsoft YaHei UI&quot;;
+</string>
+   </property>
+   <property name="text">
+    <string>行数：</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_cols">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>150</y>
+     <width>120</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-size:17px;
+font-family: &quot;Microsoft YaHei UI&quot;;
+border:1px solid #999999
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_7">
+   <property name="geometry">
+    <rect>
+     <x>265</x>
+     <y>150</y>
+     <width>50</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-size:17px;
+font-family: &quot;Microsoft YaHei UI&quot;;
+</string>
+   </property>
+   <property name="text">
+    <string>列数：</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_8">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>110</y>
+     <width>70</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-size:17px;
+font-family: &quot;Microsoft YaHei UI&quot;;
+</string>
+   </property>
+   <property name="text">
+    <string>通道数：</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_channels">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>110</y>
+     <width>120</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-size:17px;
+font-family: &quot;Microsoft YaHei UI&quot;;
+border:1px solid #999999
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_fangda">
+   <property name="geometry">
+    <rect>
+     <x>400</x>
+     <y>230</y>
+     <width>80</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: #fff;
+text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+background-color: #169fe6;
+padding: 11px 19px;
+font-size: 17px;
+border-radius: 6px;
+font-family: &quot;Microsoft YaHei UI&quot;</string>
+   </property>
+   <property name="text">
+    <string>放大</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_suoxiao">
+   <property name="geometry">
+    <rect>
+     <x>400</x>
+     <y>280</y>
+     <width>80</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: #fff;
+text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+background-color: #169fe6;
+padding: 11px 19px;
+font-size: 17px;
+border-radius: 6px;
+font-family: &quot;Microsoft YaHei UI&quot;</string>
+   </property>
+   <property name="text">
+    <string>缩小</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_heibai">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>230</y>
+     <width>80</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: #fff;
+text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+background-color: #169fe6;
+padding: 11px 19px;
+font-size: 17px;
+border-radius: 6px;
+font-family: &quot;Microsoft YaHei UI&quot;</string>
+   </property>
+   <property name="text">
+    <string>黑白</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_16">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>200</y>
+     <width>90</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-size:17px;
+font-family: &quot;Microsoft YaHei UI&quot;;
+</string>
+   </property>
+   <property name="text">
+    <string>其他操作：</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_fanse">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>230</y>
+     <width>80</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: #fff;
+text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+background-color: #169fe6;
+padding: 11px 19px;
+font-size: 17px;
+border-radius: 6px;
+font-family: &quot;Microsoft YaHei UI&quot;</string>
+   </property>
+   <property name="text">
+    <string>反色</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_fudiao">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>230</y>
+     <width>80</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: #fff;
+text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+background-color: #169fe6;
+padding: 11px 19px;
+font-size: 17px;
+border-radius: 6px;
+font-family: &quot;Microsoft YaHei UI&quot;</string>
+   </property>
+   <property name="text">
+    <string>浮雕</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_manhua">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>230</y>
+     <width>80</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: #fff;
+text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+background-color: #169fe6;
+padding: 11px 19px;
+font-size: 17px;
+border-radius: 6px;
+font-family: &quot;Microsoft YaHei UI&quot;</string>
+   </property>
+   <property name="text">
+    <string>漫画</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_sumiao">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>280</y>
+     <width>80</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: #fff;
+text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+background-color: #169fe6;
+padding: 11px 19px;
+font-size: 17px;
+border-radius: 6px;
+font-family: &quot;Microsoft YaHei UI&quot;</string>
+   </property>
+   <property name="text">
+    <string>素描</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_fugu">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>280</y>
+     <width>80</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: #fff;
+text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+background-color: #169fe6;
+padding: 11px 19px;
+font-size: 17px;
+border-radius: 6px;
+font-family: &quot;Microsoft YaHei UI&quot;</string>
+   </property>
+   <property name="text">
+    <string>复古</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_miaobian">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>280</y>
+     <width>80</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: #fff;
+text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+background-color: #169fe6;
+padding: 11px 19px;
+font-size: 17px;
+border-radius: 6px;
+font-family: &quot;Microsoft YaHei UI&quot;</string>
+   </property>
+   <property name="text">
+    <string>描边</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_jingxiang">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>280</y>
+     <width>80</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: #fff;
+text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+background-color: #169fe6;
+padding: 11px 19px;
+font-size: 17px;
+border-radius: 6px;
+font-family: &quot;Microsoft YaHei UI&quot;</string>
+   </property>
+   <property name="text">
+    <string>镜像</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_shuzi">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>330</y>
+     <width>80</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: #fff;
+text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+background-color: #169fe6;
+padding: 11px 19px;
+font-size: 17px;
+border-radius: 6px;
+font-family: &quot;Microsoft YaHei UI&quot;</string>
+   </property>
+   <property name="text">
+    <string>数字</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_bolang">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>330</y>
+     <width>80</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: #fff;
+text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+background-color: #169fe6;
+padding: 11px 19px;
+font-size: 17px;
+border-radius: 6px;
+font-family: &quot;Microsoft YaHei UI&quot;</string>
+   </property>
+   <property name="text">
+    <string>波浪</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_bolang_2">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>330</y>
+     <width>80</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: #fff;
+text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+background-color: #169fe6;
+padding: 11px 19px;
+font-size: 17px;
+border-radius: 6px;
+font-family: &quot;Microsoft YaHei UI&quot;</string>
+   </property>
+   <property name="text">
+    <string>波浪</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_bolang_3">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>330</y>
+     <width>80</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: #fff;
+text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+background-color: #169fe6;
+padding: 11px 19px;
+font-size: 17px;
+border-radius: 6px;
+font-family: &quot;Microsoft YaHei UI&quot;</string>
+   </property>
+   <property name="text">
+    <string>波浪</string>
+   </property>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>btn_miaobian</sender>
+   <signal>clicked()</signal>
+   <receiver>PictureMg</receiver>
+   <slot>miaobian()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>663</x>
+     <y>303</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>657</x>
+     <y>368</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_fugu</sender>
+   <signal>clicked()</signal>
+   <receiver>PictureMg</receiver>
+   <slot>fugu()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>570</x>
+     <y>305</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>579</x>
+     <y>338</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_jingxiang</sender>
+   <signal>clicked()</signal>
+   <receiver>PictureMg</receiver>
+   <slot>jingxiang()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>482</x>
+     <y>301</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>485</x>
+     <y>334</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_fanse</sender>
+   <signal>clicked()</signal>
+   <receiver>PictureMg</receiver>
+   <slot>fanse()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>478</x>
+     <y>239</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>478</x>
+     <y>208</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_fudiao</sender>
+   <signal>clicked()</signal>
+   <receiver>PictureMg</receiver>
+   <slot>fudiao()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>578</x>
+     <y>252</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>571</x>
+     <y>217</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_heibai</sender>
+   <signal>clicked()</signal>
+   <receiver>PictureMg</receiver>
+   <slot>heibai()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>406</x>
+     <y>250</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>327</x>
+     <y>250</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_suoxiao</sender>
+   <signal>clicked()</signal>
+   <receiver>PictureMg</receiver>
+   <slot>suoxiao()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>525</x>
+     <y>44</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>526</x>
+     <y>74</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_fangda</sender>
+   <signal>clicked()</signal>
+   <receiver>PictureMg</receiver>
+   <slot>fangda()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>407</x>
+     <y>48</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>409</x>
+     <y>72</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_reset</sender>
+   <signal>clicked()</signal>
+   <receiver>PictureMg</receiver>
+   <slot>reset()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>273</x>
+     <y>44</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>275</x>
+     <y>64</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_save</sender>
+   <signal>clicked()</signal>
+   <receiver>PictureMg</receiver>
+   <slot>save()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>182</x>
+     <y>42</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>183</x>
+     <y>69</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_open</sender>
+   <signal>clicked()</signal>
+   <receiver>PictureMg</receiver>
+   <slot>open()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>68</x>
+     <y>44</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>68</x>
+     <y>66</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_back</sender>
+   <signal>clicked()</signal>
+   <receiver>PictureMg</receiver>
+   <slot>back()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>48</x>
+     <y>556</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>54</x>
+     <y>515</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_manhua</sender>
+   <signal>clicked()</signal>
+   <receiver>PictureMg</receiver>
+   <slot>manhua()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>650</x>
+     <y>253</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>640</x>
+     <y>219</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_shuzi</sender>
+   <signal>clicked()</signal>
+   <receiver>PictureMg</receiver>
+   <slot>shuzi()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>400</x>
+     <y>356</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>438</x>
+     <y>351</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_sumiao</sender>
+   <signal>clicked()</signal>
+   <receiver>PictureMg</receiver>
+   <slot>sumiao()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>396</x>
+     <y>293</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>308</x>
+     <y>286</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_bolang</sender>
+   <signal>clicked()</signal>
+   <receiver>PictureMg</receiver>
+   <slot>bolang()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>477</x>
+     <y>352</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>525</x>
+     <y>358</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>fanse()</slot>
+  <slot>fudiao()</slot>
+  <slot>youhua()</slot>
+  <slot>sumiao()</slot>
+  <slot>jingxiang()</slot>
+  <slot>fugu()</slot>
+  <slot>miaobian()</slot>
+  <slot>heibai()</slot>
+  <slot>suoxiao()</slot>
+  <slot>fangda()</slot>
+  <slot>reset()</slot>
+  <slot>save()</slot>
+  <slot>open()</slot>
+  <slot>back()</slot>
+  <slot>manhua()</slot>
+  <slot>baoheduChange(int)</slot>
+  <slot>liangduChange(int)</slot>
+  <slot>sediaoChange(int)</slot>
+  <slot>ruihuaChange(int)</slot>
+  <slot>duibiduChange(int)</slot>
+  <slot>shuzi()</slot>
+  <slot>sumiao1()</slot>
+  <slot>slot1()</slot>
+  <slot>bolang()</slot>
+ </slots>
+</ui>

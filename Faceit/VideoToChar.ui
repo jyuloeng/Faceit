@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>VideoToChar</class>
+ <widget class="QWidget" name="VideoToChar">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1000</width>
+    <height>850</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>VideoToChar</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background:#fff
+</string>
+  </property>
+  <widget class="QLabel" name="label_vedio">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1000</width>
+     <height>750</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_openVideo">
+   <property name="geometry">
+    <rect>
+     <x>440</x>
+     <y>780</y>
+     <width>120</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: #fff;
+text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+background-color: #169fe6;
+padding: 11px 19px;
+font-size: 17px;
+border-radius: 6px;
+font-family: &quot;Microsoft YaHei UI&quot;</string>
+   </property>
+   <property name="text">
+    <string>打开视频</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_back">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>780</y>
+     <width>40</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: #fff;
+text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+background-color: #169fe6;
+font-size: 17px;
+border-radius: 6px;
+font-family: &quot;Microsoft YaHei UI&quot;</string>
+   </property>
+   <property name="text">
+    <string>&lt;</string>
+   </property>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>btn_openVideo</sender>
+   <signal>clicked()</signal>
+   <receiver>VideoToChar</receiver>
+   <slot>openVideo()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>341</x>
+     <y>648</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>235</x>
+     <y>647</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_back</sender>
+   <signal>clicked()</signal>
+   <receiver>VideoToChar</receiver>
+   <slot>back()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>40</x>
+     <y>650</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>93</x>
+     <y>649</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>openVideo()</slot>
+  <slot>saveVideo()</slot>
+  <slot>back()</slot>
+ </slots>
+</ui>

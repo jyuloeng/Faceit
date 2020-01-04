@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FaceitClass</class>
+ <widget class="QMainWindow" name="FaceitClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>350</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Faceit</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background:#fff</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QPushButton" name="btn_videoFaceMg">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>80</y>
+      <width>150</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: #fff;
+text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+background-color: #169fe6;
+padding: 11px 19px;
+font-size: 17px;
+border-radius: 6px;
+font-family: &quot;Microsoft YaHei UI&quot;</string>
+    </property>
+    <property name="text">
+     <string>视频人脸处理</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_pictureFaceMg">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>140</y>
+      <width>150</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: #fff;
+text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+background-color: #169fe6;
+padding: 11px 19px;
+font-size: 17px;
+border-radius: 6px;
+font-family: &quot;Microsoft YaHei UI&quot;</string>
+    </property>
+    <property name="text">
+     <string>图片人脸处理</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_videoToChar">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>200</y>
+      <width>150</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: #fff;
+text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+background-color: #169fe6;
+padding: 11px 19px;
+font-size: 17px;
+border-radius: 6px;
+font-family: &quot;Microsoft YaHei UI&quot;</string>
+    </property>
+    <property name="text">
+     <string>字符化处理</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_pictureMg">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>260</y>
+      <width>150</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: #fff;
+text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+background-color: #169fe6;
+padding: 11px 19px;
+font-size: 17px;
+border-radius: 6px;
+font-family: &quot;Microsoft YaHei UI&quot;</string>
+    </property>
+    <property name="text">
+     <string>图片处理</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="Faceit.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>btn_pictureFaceMg</sender>
+   <signal>clicked()</signal>
+   <receiver>FaceitClass</receiver>
+   <slot>toPictureFaceMg()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>155</x>
+     <y>157</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>78</x>
+     <y>159</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_videoToChar</sender>
+   <signal>clicked()</signal>
+   <receiver>FaceitClass</receiver>
+   <slot>toVideoToChar()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>166</x>
+     <y>218</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>76</x>
+     <y>222</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_pictureMg</sender>
+   <signal>clicked()</signal>
+   <receiver>FaceitClass</receiver>
+   <slot>toPictureMg()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>160</x>
+     <y>280</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>80</x>
+     <y>278</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_videoFaceMg</sender>
+   <signal>clicked()</signal>
+   <receiver>FaceitClass</receiver>
+   <slot>toVideoFaceMg()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>154</x>
+     <y>95</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>76</x>
+     <y>98</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>toPictureFaceMg()</slot>
+  <slot>toVideoFaceMg()</slot>
+  <slot>toVideoToChar()</slot>
+  <slot>toPictureMg()</slot>
+ </slots>
+</ui>

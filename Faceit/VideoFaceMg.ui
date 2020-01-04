@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>VideoFaceMg</class>
+ <widget class="QWidget" name="VideoFaceMg">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1000</width>
+    <height>700</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>VideoFaceMg</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background:#fff</string>
+  </property>
+  <widget class="QPushButton" name="btn_back">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>640</y>
+     <width>40</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: #fff;
+text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+background-color: #169fe6;
+font-size: 17px;
+border-radius: 6px;
+font-family: &quot;Microsoft YaHei UI&quot;</string>
+   </property>
+   <property name="text">
+    <string>&lt;</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_closeVideo">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>640</y>
+     <width>120</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: #fff;
+text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+background-color: #169fe6;
+padding: 11px 19px;
+font-size: 17px;
+border-radius: 6px;
+font-family: &quot;Microsoft YaHei UI&quot;</string>
+   </property>
+   <property name="text">
+    <string>关闭视频</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_media">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>700</width>
+     <height>525</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid #169fe6;
+border-radius: 6px;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_faceSwapInput">
+   <property name="geometry">
+    <rect>
+     <x>730</x>
+     <y>10</y>
+     <width>250</width>
+     <height>250</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid #169fe6;
+border-radius: 6px;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_openVedio">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>590</y>
+     <width>120</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: #fff;
+text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+background-color: #169fe6;
+padding: 11px 19px;
+font-size: 17px;
+border-radius: 6px;
+font-family: &quot;Microsoft YaHei UI&quot;</string>
+   </property>
+   <property name="text">
+    <string>打开视频</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_openCamera">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>590</y>
+     <width>120</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: #fff;
+text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+background-color: #169fe6;
+padding: 11px 19px;
+font-size: 17px;
+border-radius: 6px;
+font-family: &quot;Microsoft YaHei UI&quot;</string>
+   </property>
+   <property name="text">
+    <string>打开摄像头</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_closeCamera">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>640</y>
+     <width>120</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: #fff;
+text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+background-color: #169fe6;
+padding: 11px 19px;
+font-size: 17px;
+border-radius: 6px;
+font-family: &quot;Microsoft YaHei UI&quot;</string>
+   </property>
+   <property name="text">
+    <string>关闭摄像头</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_recordVideo">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>590</y>
+     <width>120</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: #fff;
+text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+background-color: #169fe6;
+padding: 11px 19px;
+font-size: 17px;
+border-radius: 6px;
+font-family: &quot;Microsoft YaHei UI&quot;</string>
+   </property>
+   <property name="text">
+    <string>录制视频</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_finishRecord">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>640</y>
+     <width>120</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: #fff;
+text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+background-color: #169fe6;
+padding: 11px 19px;
+font-size: 17px;
+border-radius: 6px;
+font-family: &quot;Microsoft YaHei UI&quot;</string>
+   </property>
+   <property name="text">
+    <string>结束录制</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_printScreen">
+   <property name="geometry">
+    <rect>
+     <x>500</x>
+     <y>640</y>
+     <width>120</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: #fff;
+text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+background-color: #169fe6;
+padding: 11px 19px;
+font-size: 17px;
+border-radius: 6px;
+font-family: &quot;Microsoft YaHei UI&quot;</string>
+   </property>
+   <property name="text">
+    <string>截图</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_faceRecognition">
+   <property name="geometry">
+    <rect>
+     <x>500</x>
+     <y>590</y>
+     <width>120</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: #fff;
+text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+background-color: #169fe6;
+padding: 11px 19px;
+font-size: 17px;
+border-radius: 6px;
+font-family: &quot;Microsoft YaHei UI&quot;</string>
+   </property>
+   <property name="text">
+    <string>人脸识别</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_faceSwapInput">
+   <property name="geometry">
+    <rect>
+     <x>730</x>
+     <y>310</y>
+     <width>120</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: #fff;
+text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+background-color: #169fe6;
+padding: 11px 19px;
+font-size: 17px;
+border-radius: 6px;
+font-family: &quot;Microsoft YaHei UI&quot;</string>
+   </property>
+   <property name="text">
+    <string>选择换脸图</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_faceSwap">
+   <property name="geometry">
+    <rect>
+     <x>860</x>
+     <y>310</y>
+     <width>120</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: #fff;
+text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+background-color: #169fe6;
+padding: 11px 19px;
+font-size: 17px;
+border-radius: 6px;
+font-family: &quot;Microsoft YaHei UI&quot;</string>
+   </property>
+   <property name="text">
+    <string>进行换脸</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>825</x>
+     <y>280</y>
+     <width>60</width>
+     <height>15</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-size:15px;
+</string>
+   </property>
+   <property name="text">
+    <string>待换区域</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_printScreen">
+   <property name="geometry">
+    <rect>
+     <x>680</x>
+     <y>460</y>
+     <width>300</width>
+     <height>225</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid #169fe6;
+border-radius: 6px;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>btn_back</sender>
+   <signal>clicked()</signal>
+   <receiver>VideoFaceMg</receiver>
+   <slot>back()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>32</x>
+     <y>659</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>26</x>
+     <y>618</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_openVedio</sender>
+   <signal>clicked()</signal>
+   <receiver>VideoFaceMg</receiver>
+   <slot>openVideo()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>146</x>
+     <y>623</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>144</x>
+     <y>566</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_closeVideo</sender>
+   <signal>clicked()</signal>
+   <receiver>VideoFaceMg</receiver>
+   <slot>closeVideo()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>183</x>
+     <y>661</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>92</x>
+     <y>661</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_openCamera</sender>
+   <signal>clicked()</signal>
+   <receiver>VideoFaceMg</receiver>
+   <slot>openCamera()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>300</x>
+     <y>616</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>302</x>
+     <y>571</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_closeCamera</sender>
+   <signal>clicked()</signal>
+   <receiver>VideoFaceMg</receiver>
+   <slot>closeCamera()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>338</x>
+     <y>666</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>338</x>
+     <y>685</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_recordVideo</sender>
+   <signal>clicked()</signal>
+   <receiver>VideoFaceMg</receiver>
+   <slot>recordVideo()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>457</x>
+     <y>617</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>442</x>
+     <y>567</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_finishRecord</sender>
+   <signal>clicked()</signal>
+   <receiver>VideoFaceMg</receiver>
+   <slot>finishRecord()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>469</x>
+     <y>661</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>498</x>
+     <y>562</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_faceRecognition</sender>
+   <signal>clicked()</signal>
+   <receiver>VideoFaceMg</receiver>
+   <slot>faceRecognition()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>567</x>
+     <y>620</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>612</x>
+     <y>578</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_printScreen</sender>
+   <signal>clicked()</signal>
+   <receiver>VideoFaceMg</receiver>
+   <slot>printScreen()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>585</x>
+     <y>667</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>649</x>
+     <y>660</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_faceSwapInput</sender>
+   <signal>clicked()</signal>
+   <receiver>VideoFaceMg</receiver>
+   <slot>faceSwapInput()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>800</x>
+     <y>336</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>801</x>
+     <y>391</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_faceSwap</sender>
+   <signal>clicked()</signal>
+   <receiver>VideoFaceMg</receiver>
+   <slot>faceSwap()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>934</x>
+     <y>332</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>939</x>
+     <y>383</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>back()</slot>
+  <slot>openVideo()</slot>
+  <slot>closeVideo()</slot>
+  <slot>openCamera()</slot>
+  <slot>closeCamera()</slot>
+  <slot>printScreen()</slot>
+  <slot>recordVideo()</slot>
+  <slot>finishRecord()</slot>
+  <slot>faceRecognition()</slot>
+  <slot>faceSwapInput()</slot>
+  <slot>faceSwap()</slot>
+ </slots>
+</ui>
